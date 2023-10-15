@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"d:\\Python_CodePTIT\\test.py","tests":[{"id":1692850061490,"input":"5 \n7\n9 \n10 \n13 \n100","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Python_CodePTIT\\test.py","group":"local","local":true}

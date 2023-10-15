@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    for t in range(int(input())):
+        a = [int(i) for i in input()]
+        sum, mul = 0, 0
+        for i in range(len(a)):
+            if i % 2 == 1:
+                sum += a[i]
+            else:
+                if a[i] != 0:
+                    if mul == 0:
+                        mul = a[i]
+                    else:
+                        mul *= a[i]
+        print(mul, sum)
