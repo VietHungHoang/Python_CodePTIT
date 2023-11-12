@@ -1,18 +1,18 @@
-a = [i.lower() for i in input().split()]
-b = [i.lower() for i in input().split()]
-m1, m2, m3 = {}, {}, {}
+if __name__ == "__main__": 
+    a = [i.lower() for i in input().split()]
+    b = [i.lower() for i in input().split()]
+    d1, d2, d3 = {}, {}, {}
+    for i in a:
+        d1[i] = 1
+        d2[i] = 1
+    for i in b:
+        d1[i] = 1
+        d3[i] = 1
+        
+    for i in sorted(d1):
+        print(i, end = ' ')
+    print()
 
-for i in a:
-    m1[i] = 1
-    m2[i] = 1
-for i in b:
-    m1[i] = 1
-    m3[i] = 1
-    
-for i in sorted(m1):
-    print(i, end=' ')
-print()
-
-for i in sorted(m2):
-    if i in m3:
-        print(i, end=' ')
+    for i in sorted(d2):
+        if i in d3:
+            print(i, end = ' ')

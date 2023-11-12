@@ -1,36 +1,20 @@
-class Bill:
-    def __init__(self, id, name, lastNum, currentNum):
-        self.id = 'KH{:02d}'.format(id)
+class Customer:
+    def __init__(self, id, name, old, new):
+        self.id = f"KH{id:02d}"
         self.name = name
-        self.lastNum = lastNum
-        self.currentNum = currentNum
-        self.calculate()
-
-    def calculate(self):
-        cnt = self.currentNum - self.lastNum
-
-        if cnt <= 50:
-            self.total = cnt * 100
-            self.total *= 1.02
-        elif cnt <= 100:
-            self.total = 50 * 100 + (cnt-50) * 150
-            self.total *= 1.03
-        else:
-            self.total = 50 * 100 + 50 * 150 + (cnt - 100) * 200
-            self.total *= 1.05
-
-        self.total = round(self.total)
-
+        self.used = new - old
+    def getPrice(self):
+        if self.used > 100:
+            return round(((self.used - 100) * 200 + 50 * 150 + 50 * 100)* 1.05)
+        elif self.used > 50:
+            return round(((self.used - 50) * 150 + 50 * 100) * 1.03)
+        else: return round(self.used * 100 * 1.02)
     def __str__(self):
-        return '{} {} {}'.format(self.id, self.name, self.total)
+        return self.id + " " + self.name + " " + str(self.getPrice())
+if __name__ == '__main__':
+    l = []
+    for i in range(int(input())):
+        l.append(Customer(i + 1, input(), int(input()), int(input())))
+    l.sort(key = lambda x : (-x.getPrice()))
+    for x in l: print(x)
 
-
-list = []
-for i in range(int(input())):
-    name = input()
-    last = int(input())
-    current = int(input())
-    list.append(Bill(i + 1, name, last, current))
-
-list.sort(key=lambda e: (-e.total))
-print(*list, sep='\n')

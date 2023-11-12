@@ -1,4 +1,4 @@
-for t in range(int(input())):
+for _ in range(int(input())):
     n, m = input().split()
     ip = input().split()
     if len(ip) == 1:

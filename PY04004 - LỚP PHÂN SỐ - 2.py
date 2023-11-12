@@ -1,30 +1,27 @@
 from math import gcd
+class Fraction:
 
-
-class PhanSo:
-
-    def __init__(self, tu=None, mau=None):
-        self.tu = tu
-        self.mau = mau
+    def __init__(self, numerator = None, denominator = None):
+        self.numerator = numerator
+        self.denominator = denominator
 
     def __add__(self, other):
-        c = PhanSo()
-        c.mau = self.mau * other.mau
-        c.tu = self.tu * other.mau + self.mau * other.tu
-        c.rut_gon()
+        c = Fraction()
+        c.denominator = self.denominator * other.denominator
+        c.numerator = self.numerator * other.denominator + self.denominator * other.numerator
+        c.reduce()
         return c
 
     def __str__(self):
-        return f'{self.tu}/{self.mau}'
+        return f'{self.numerator}/{self.denominator}'
 
-    def rut_gon(self):
-        g = gcd(self.tu, self.mau)
-        self.tu //= g
-        self.mau //= g
+    def reduce(self):
+        g = gcd(self.numerator, self.denominator)
+        self.numerator //= g
+        self.denominator //= g
 
-
-list = [int(i) for i in input().split()]
-a = PhanSo(list[0], list[1])
-b = PhanSo(list[2], list[3])
-c = a + b
-print(c)
+if __name__ == '__main__':
+    list = list(map(int, input().split()))
+    a = Fraction(list[0], list[1])
+    b = Fraction(list[2], list[3])
+    print(a + b)

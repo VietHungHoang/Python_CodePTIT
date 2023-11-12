@@ -1,15 +1,12 @@
 class Student:
-
-    def __init__(self, name, dob, marks):
+    def __init__(self, name, dob, mark1, mark2, mark3):
         self.name = name
         self.dob = dob
-        self.score = sum(marks)
-
+        self.marks = mark1 + mark2 + mark3
+    
     def __str__(self):
-        return f'{self.name} {self.dob} {self.score}'
+        return self.name + " " + self.dob + " " + ("%.1f" % self.marks)
 
 
-name = input()
-dob = input()
-marks = [float(input()), float(input()), float(input())]
-print(Student(name, dob, marks))
+if __name__ == '__main__':
+    print(Student(input(), input(), float(input()), float(input()), float(input())))

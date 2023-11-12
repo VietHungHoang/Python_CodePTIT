@@ -4,9 +4,10 @@ def check(a, b):
             return 'NO'
     return 'YES'
 
+if __name__ == '__main__':
 
-for t in range(int(input())):
-    n = int(input())
-    a = sorted([int(i) for i in input().split()])
-    b = sorted([int(i) for i in input().split()])
-    print(check(a, b))
+    for _ in range(int(input())):
+        n = int(input())
+        a = sorted(list(map(int, input().split())))
+        b = sorted(list(map(int, input().split())))
+        print(check(a, b))

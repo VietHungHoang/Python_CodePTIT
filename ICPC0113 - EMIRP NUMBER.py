@@ -1,23 +1,20 @@
-from math import sqrt
+maxN = int(1e6+1)
 
-
-def emirp(n):
-    if n == 2 or n == 3:
-        return True
-    if n < 5 or n % 2 == 0 or n % 3 == 0:
-        return False
-    for i in range(5, int(sqrt(n)+1), 6):
-        if n % i == 0 or n % (i+2) == 0:
-            return False
-    return True
-
-
-for __ in range(int(input())):
-    used = []
-    n = int(input())
-    for i in range(13, n):
-        num = str(i)
-        if int(num[::-1]) < n and num != num[::-1] and emirp(int(num)) and emirp(int(num[::-1])) and num not in used:
-            print(i, num[::-1], end=' ')
-            used += [num, num[::-1]]
-    print()
+prime = [1] * maxN
+prime[0] = prime[1] = 0
+for i in range(1000):
+    if prime[i]:
+        for j in range(i*i, maxN, i):
+            prime[j] = 0
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        used = []
+        n = int(input())
+        for i in range(2, n):
+            s = str(i)
+            t = s[::-1]
+            if s != t and int(t) < n and prime[i] and prime[int(t)] and s not in used:
+                print(s, t, end = " ")
+                used.append(s)
+                used.append(t)
+        print()

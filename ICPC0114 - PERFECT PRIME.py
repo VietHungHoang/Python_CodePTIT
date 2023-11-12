@@ -1,7 +1,6 @@
 import math
 
-
-def isprime(n):
+def is_prime(n):
     if n < 2:
         return False
     for i in range(2, int(math.sqrt(n)+1)):
@@ -9,17 +8,15 @@ def isprime(n):
             return False
     return True
 
-
 def deff(str):
     for i in str:
-        if not isprime(int(i)):
+        if not is_prime(int(i)):
             return 'No'
     s = sum([int(i) for i in str])
     num1, num2 = str, str[::-1]
-    if not isprime(s) or not isprime(int(num1)) or not isprime(int(num2)):
+    if not is_prime(s) or not is_prime(int(num1)) or not is_prime(int(num2)):
         return 'No'
     return 'Yes'
-
-
-for case in range(int(input())):
-    print(deff(input()))
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        print(deff(input()))

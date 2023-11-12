@@ -19,11 +19,11 @@ class Matrix:
             print(*i)
         return ''
 
-
-for t in range(int(input())):
-    n, m = [int(i) for i in input().split()]
-    mt = []
-    for i in range(n):
-        mt.append([int(j) for j in input().split()])
-    matrix = Matrix(n, m, mt)
-    print(matrix.__mul__())
+if __name__ == '__main__':
+    for t in range(int(input())):
+        n, m = [int(i) for i in input().split()]
+        mt = []
+        for i in range(n):
+            mt.append([int(j) for j in input().split()])
+        matrix = Matrix(n, m, mt)
+        print(matrix.__mul__())
