@@ -1,5 +1,5 @@
 # DANH SÁCH
-## ICPI0101 - THU GỌN DÃY SỐ
+## ICPC0101 - THU GỌN DÃY SỐ
 Cho dãy số A[] chỉ bao gồm các số nguyên dương. Người ta thu gọn dần dãy số bằng cách loại bỏ các cặp phần tử kề nhau mà có tổng là chẵn. Sau khi cặp phần tử đó bị loại ra thì dãy số được dồn lại. Cứ tiếp tục như vậy cho đến khi không còn cặp phần tử nào kề nhau có tổng chẵn nữa.
 
 Hãy tính xem cuối cùng dãy A[] còn bao nhiêu phần tử.
@@ -37,7 +37,7 @@ Ghi ra trên một dòng số phần tử còn lại trong dãy A[].
 2
 ```
 
-## ICPI0104 - TÌM SỐ NHỎ NHẤT
+## ICPC0104 - TÌM SỐ NHỎ NHẤT
 Cho xâu ký tự có độ dài n bao gồm các ký tự từ ‘a’, ‘b’, …, ‘z’ và các số từ 0 đến 9. Nhiệm vụ của bạn là tìm số nhỏ nhất xuất hiện trong xâu. Ví dụ với xâu X[]=”12ab29cd19” ta có kết quả là 12.
 
 **Input:**
@@ -65,7 +65,7 @@ ab123gh456cd
 123
 ```
 
-## ICPI0105 - TÌM SỐ LỚN NHẤT
+## ICPC0105 - TÌM SỐ LỚN NHẤT
 Cho xâu ký tự có độ dài n bao gồm các ký tự từ ‘a’, ‘b’, …, ‘z’ và các số từ 0 đến 9. Nhiệm vụ của bạn là tìm số lớn nhất xuất hiện trong xâu. Ví dụ với xâu X[]=”12ab29cd19” ta có kết quả là 29.
 
 **Input:**
@@ -93,7 +93,7 @@ ab123gh456cd
 456
 ```
 
-## ICPI0106 - ĐỔI CƠ SỐ - 2
+## ICPC0106 - ĐỔI CƠ SỐ - 2
 Cho xâu nhị phân X[] có độ dài n. Nhiệm vụ của bạn là hãy đổi xâu nhị phân thành một số ở hệ cơ số b, trong đó b chỉ là một trong các số 2, 4, 8, 16. Ví dụ xâu X =”10010100010010101” và b = 8 ta có kết quả là 224225 là số ở hệ cơ số 8.
 
 **Input:**
@@ -121,7 +121,7 @@ Cho xâu nhị phân X[] có độ dài n. Nhiệm vụ của bạn là hãy đ�
 224225
 10010100010010101
 ```
-## ICPI0107 - THAY ĐỔI CHỮ SỐ
+## ICPC0107 - THAY ĐỔI CHỮ SỐ
 Cho xâu nhị phân X[] có độ dài n. Nhiệm vụ của bạn là hãy đổi xâu nhị phân thành một số ở hệ cơ số b, trong đó b chỉ là một trong các số 2, 4, 8, 16. Ví dụ xâu X =”10010100010010101” và b = 8 ta có kết quả là 224225 là số ở hệ cơ số 8.
 
 **Input:**
@@ -148,7 +148,7 @@ Cho xâu nhị phân X[] có độ dài n. Nhiệm vụ của bạn là hãy đ�
 21100  1312
 ```
 
-## ICPI0108 - SUM TRIPLE ZERO
+## ICPC0108 - SUM TRIPLE ZERO
 Cho mảng A[] gồm N số nguyên khác nhau. Nhiệm vụ của bạn là đếm số lượng các bộ ba phần tử khác nhau có tổng là 0. Ví dụ A[] = {0, -1, 2, -3, 1}, ta nhận được kết quả là 2 vì có hai bộ 3: (0, -1, 1) và (2, -3, 1).
 
 **Input:**
@@ -177,7 +177,7 @@ Cho mảng A[] gồm N số nguyên khác nhau. Nhiệm vụ của bạn là đ�
 1
 ```
 
-## ICPI0109 - MIN TRIPLE
+## ICPC0109 - MIN TRIPLE
 Cho mảng A[] gồm N số nguyên.      
 Nhiệm vụ của bạn là tìm tổng nhỏ nhất của bộ ba số trong mảng. Ví dụ A[] = {1, 2, 3, 4, 5}, ta nhận được tổng nhỏ nhất của bộ ba số là 1 + 2 + 3 = 6. Chú ý nếu sử dụng kỹ thuật sắp xếp, submit lời giải của bạn sẽ bị fail.
 
@@ -207,7 +207,7 @@ Nhiệm vụ của bạn là tìm tổng nhỏ nhất của bộ ba số trong m
 2
 ```
 
-## ICPI0110 - MAX TRIPLE
+## ICPC0110 - MAX TRIPLE
 Cho mảng A[] gồm N số nguyên.      
 Nhiệm vụ của bạn là tìm tổng lớn nhất của bộ ba số trong mảng. Chú ý nếu sử dụng kỹ thuật sắp xếp, submit lời giải của bạn sẽ bị fail.      
 Ví dụ A[] = {1, 2, 3, 4, 5}, ta nhận được tổng lớn nhất của bộ ba số là 3 + 4 + 5 = 12. 
@@ -238,7 +238,7 @@ Ví dụ A[] = {1, 2, 3, 4, 5}, ta nhận được tổng lớn nhất của b�
 37
 ```
 
-## ICPI0111 - XOAY MẢNG
+## ICPC0111 - XOAY MẢNG
 Cho mảng A[] gồm N số nguyên và số tự nhiên d.    Hãy thực hiện quay mảng A[] với d phần tử từ phải qua trái. Ví dụ A[] = {1, 2, 3, 4, 5}, d = 2 ta nhận được mảng A[] = {3, 4, 5, 1, 2}.
 
 **Input:**
@@ -267,7 +267,7 @@ Cho mảng A[] gồm N số nguyên và số tự nhiên d.    Hãy thực hiệ
 8 10 12 14 16 18 20 2 4 6
 ```
 
-## ICPI0112 - PRIME – TRIPLET
+## ICPC0112 - PRIME – TRIPLET
 Bộ ba số nguyên tố được gọi là Prime- Triplet nếu nó là bộ ba số nguyên tố dưới dạng (p, p +2, p + 6) hoặc (p, p + 4, p+6), trong đó p là một số nguyên tố. Ví dụ các bộ ba số (5, 7, 11) hoặc (7, 11, 13) đều là các Prime-Triplet. Cho số tự nhiên N, nhiệm vụ của bạn là đếm số các Prime-Triplet nhỏ hơn N.
 
 **Input:**
@@ -294,7 +294,7 @@ Bộ ba số nguyên tố được gọi là Prime- Triplet nếu nó là bộ b
 5
 ```
 
-## ICPI0113 - EMIRP NUMBER
+## ICPC0113 - EMIRP NUMBER
 Một số nguyên dương K được gọi là Emirp Number nếu K là số nguyên tố, đảo các chữ số của K cũng là một số nguyên tố nhưng không phải chính nó (không đối xứng). Ví dụ số 11 không phải là số Emirp Number. Cho số tự nhiên N, nhiệm vụ của bạn là hãy liệt kê tất cả các số Emirp Number nhỏ hơn N.
 
 **Input:**
@@ -322,7 +322,7 @@ Một số nguyên dương K được gọi là Emirp Number nếu K là số ng
 13  31  17  71  37 73 79  97
 ```
 
-## ICPI0114 - PERFECT PRIME
+## ICPC0114 - PERFECT PRIME
 Một số nguyên dương N được gọi là Perfect Prime nếu N là số nguyên tố; đảo ngược các chữ số của N cũng là một số nguyên tố; tổng các chữ số của N là một số nguyên tố và mỗi chữ số của N cũng là một số nguyên tố. Cho số nguyên dương N, hãy kiểm tra N có phải là Perfect Prime hay không? Đưa ra “Yes” nếu N là Perfect Prime, ngược lại đưa ra “No”.
 
 **Input:**
@@ -351,7 +351,7 @@ No
 Yes
 ```
 
-## ICPI0115 - SỐ KRISH
+## ICPC0115 - SỐ KRISH
 Một số nguyên dương N được gọi là số Krish nếu tổng giai thừa các chữ số của N bằng chính nó. Ví dụ N = 145 = 1! + 4! + 5! = 145 là một số Krish. Cho số nguyên dương N, hãy kiểm tra N có phải là một số Krish hay không? Đưa ra “Yes” nếu N là một số Krish, ngược lại đưa ra “No”.
 
 **Input:**
@@ -378,7 +378,7 @@ Yes
 No
 ```
 
-## ICPI0116 - CON SỐ DUYÊN NỢ
+## ICPC0116 - CON SỐ DUYÊN NỢ
 Con số duyên nợ là con số có chữ số đầu và chữ số cuối giống nhau.       
 Viết chương trình kiểm tra xem một số nguyên dương n ghi trong hệ thập phân có chữ số đầu và chữ số cuối giống nhau không?
 
@@ -405,7 +405,7 @@ NO
 YES
 ```
 
-## ICPI0117 - CHÚC MỪNG NĂM MỚI
+## ICPC0117 - CHÚC MỪNG NĂM MỚI
 Tí năm nay đã lên lớp 1 rồi, Tết đến Tí rất vui vì nhận được rất nhiều lời chúc.       
 Vì mới tập viết nên Tí đã ghi lại tất cả các lời chúc đó. Cũng vì rất trân trọng các lời chúc nên Tí đã ghi tất cả các lời chúc bằng chữ IN HOA, tuy nhiên do mới tập viết nên Tí ghi không có dấu. Giờ ngồi lật lại cuốn nhật ký ghi các lời chúc, Tí thấy mình đã ghi được n lời chúc.        
 Tí muốn biết có bao nhiêu lời chúc khác nhau (hai lời chúc được gọi là khác nhau nếu chúng có độ dài khác nhau hoặc tồn tại ít nhất một vị trí mà ký tự ở vị trí đó của hai lời chúc là khác nhau, hay nói cách khác, đó là hai xâu ký tự khác nhau). Bạn hãy lập chương trình giúp Tí đếm xem có bao nhiêu lời chúc khác nhau nhé.
@@ -435,7 +435,7 @@ CHUC MUNG NAM MOI
 3
 ```
 
-## ICPI0118 - CUNG HOÀNG ĐẠO
+## ICPC0118 - CUNG HOÀNG ĐẠO
 Trong chiêm tinh học phương Tây, các cung Hoàng Đạo là mười hai cung 30° của Hoàng Đạo, bắt đầu từ điểm phân Vernal (một trong những giao điểm của Hoàng Đạo với Xích đạo thiên cầu), còn được gọi là Điểm Đầu của Bạch Dương. Thứ tự của các cung Hoàng Đạo là Bạch Dương, Kim Ngưu, Song Tử, Cự Giải, Sư Tử, Xử Nữ, Thiên Bình, Thiên Yết, Nhân Mã, Ma Kết, Bảo Bình và Song Ngư. Mỗi khu vực được đặt tên theo chòm sao mà nó đi qua trong lúc đặt tên. Cung hoàng đạo của một người được xác định dựa trên ngày sinh bằng bảng dưới đây:
 ![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/a14d3f53-2d46-46f6-970a-29631710712e)
 Ví dụ: nếu sinh nhật của một người là vào ngày 5 tháng 5, thì họ là Kim Ngưu, vì nó nằm trong khoảng từ ngày 21 tháng 4 đến ngày 20 tháng 5.      
