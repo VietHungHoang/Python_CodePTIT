@@ -145,7 +145,7 @@ Cho xâu nhị phân X[] có độ dài n. Nhiệm vụ của bạn là hãy đ�
 ```
 **Output**
 ```
-21100  1312
+21100 1312
 ```
 
 ## ICPC0108 - SUM TRIPLE ZERO
