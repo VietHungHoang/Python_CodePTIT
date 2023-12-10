@@ -438,8 +438,10 @@ CHUC MUNG NAM MOI
 ## ICPC0118 - CUNG HOÀNG ĐẠO
 Trong chiêm tinh học phương Tây, các cung Hoàng Đạo là mười hai cung 30° của Hoàng Đạo, bắt đầu từ điểm phân Vernal (một trong những giao điểm của Hoàng Đạo với Xích đạo thiên cầu), còn được gọi là Điểm Đầu của Bạch Dương. Thứ tự của các cung Hoàng Đạo là Bạch Dương, Kim Ngưu, Song Tử, Cự Giải, Sư Tử, Xử Nữ, Thiên Bình, Thiên Yết, Nhân Mã, Ma Kết, Bảo Bình và Song Ngư. Mỗi khu vực được đặt tên theo chòm sao mà nó đi qua trong lúc đặt tên. Cung hoàng đạo của một người được xác định dựa trên ngày sinh bằng bảng dưới đây:
 ![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/a14d3f53-2d46-46f6-970a-29631710712e)
+
 Ví dụ: nếu sinh nhật của một người là vào ngày 5 tháng 5, thì họ là Kim Ngưu, vì nó nằm trong khoảng từ ngày 21 tháng 4 đến ngày 20 tháng 5.      
 Nhiệm vụ của bạn là xác định cung hoàng đạo của một ngày sinh bất kỳ.
+
 **Input:**
 
 * Dòng đầu tiên đưa vào số lượng bộ test T.
