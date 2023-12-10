@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    with open ("DATA.in", "r") as inp:
+    with open ("CONTACT.in", "r") as inp:
             n = inp.readline()
             for _ in range(int(n)):
                 n = int(inp.readline())

@@ -1,16 +1,16 @@
-class Subject:
-    def __init__(self, id, name, exam):
+class Exam:
+    def __init__(self, id, name, format):
         self.id = id
         self.name = name
-        self.exam = exam
-
+        self.format = format
+    
     def __str__(self):
-        return '{} {} {}'.format(self.id, self.name, self.exam)
+        return f'{self.id} {self.name} {self.format}'
 
-
-list = []
-for i in range(int(input())):
-    list.append(Subject(input(), input(), input()))
-
-list.sort(key=lambda e: e.id)
-print(*list, sep='\n')
+if __name__ == '__main__':
+    n = int(input())
+    exams = []
+    for _ in range(n):
+        exams.append(Exam(input(), input(), input()))
+    for x in sorted(exams, key = lambda x : x.id):
+        print(x)

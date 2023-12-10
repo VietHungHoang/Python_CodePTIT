@@ -1,14 +1,12 @@
+def isRev(n):
+    return n > 9 and str(n) == str(n)[::-1]
 if __name__ == "__main__":
     n, m = map(int, input().split())
     res = -1
-    max_val, min_val = -1, 10**9
     a = [list(map(int, input().split())) for _ in range(n)]
     for i in range(n):
-        max_val = max(max(a[i]), max_val)
-        min_val = min(min(a[i]), min_val)
-    for i in range(n):
         for j in a[i]:
-            if j == max_val - min_val:
+            if isRev(j) and j > res:
                 res = j
     if res == -1:
         print('NOT FOUND')

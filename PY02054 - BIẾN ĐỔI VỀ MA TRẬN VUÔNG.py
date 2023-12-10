@@ -1,26 +1,15 @@
-n, m = [int(x) for x in input().split()]
-a = [[0]] * n
-for i in range(n):
-    a[i] = [int(x) for x in input().split()]
-if n < m:
-    d = [1]
-    b = []
-    while m > n + len(d):
-        d.append(d[-1] + 2)
-    for i in range(n):
-        for j in range(m):
-            if not(j in d):
-                print(a[i][j], end=' ')
-        print()
-else:
-    d = []
+if __name__ == "__main__":
+    n, m = map(int, input().split())
+    a = [list(map(int, input().split())) for _ in range(n)]
     if n > m:
-        d = [0]
-    b = []
-    while n > m + len(d):
-        d.append(d[-1] + 2)
-    for i in range(n):
-        if not(i in d):
-            for j in range(m):
-                print(a[i][j], end=' ')
-            print()
+        tmp = n - m
+        while tmp:
+            a.pop(2*(tmp - 1))
+            tmp -= 1
+    elif m > n:
+        tmp = m - n
+        2 * (tmp - 1) + 1
+        while tmp:
+            for x in a: x.pop(2 * (tmp - 1) + 1)
+            tmp -= 1
+    for x in a: print(*x)

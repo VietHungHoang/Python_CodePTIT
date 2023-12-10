@@ -1,29 +1,25 @@
-import math
+def prime(n):
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return n > 1
 
-
-def isPrime(n):
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return n >= 2
-
-
-n = int(input())
-a = [int(i) for i in input().split()]
-b = {}
-for i in a:
-    b[i] = 1
-
-a = list(b)
-n = len(a)
-
-for i in range(1, len(a)):
-    a[i] += a[i - 1]
-hasAns = False
-for i in range(len(a)):
-    if isPrime(a[i]) and isPrime(a[n - 1] - a[i]):
-        hasAns = True
-        print(i)
-        break
-if not hasAns:
-    print("NOT FOUND")
+if __name__ == "__main__":
+    input()
+    a = list(map(int, input().split()))
+    s = set(a)
+    b = []
+    for x in a:
+        if x in s:
+            b.append(x)
+            s.discard(x)
+    m = len(b)
+    sum_b = sum(b)
+    cnt = 0
+    ok = False
+    for i in range(0, m):
+        cnt += b[i]
+        if prime(cnt) and prime(sum_b - cnt):
+            print(i)
+            ok = True
+            break
+    if not ok: print("NOT FOUND")
