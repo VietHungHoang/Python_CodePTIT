@@ -851,7 +851,7 @@ Ghi ra số nhỏ nhất còn thiếu nếu có (khi dãy số đầy đủ các
 3
 ```
 
-## PY 02019 - NGUYÊN TỐ CÙNG NHAU
+## PY02019 - NGUYÊN TỐ CÙNG NHAU
 Cho dãy số A[] có n phần tử là các số nguyên dương khác nhau, giá trị không quá 100. Hãy liệt kê các cặp số nguyên tố cùng nhau xuất hiện trong dãy theo thứ tự tăng dần, mỗi cặp số in trên một dòng.           
 Một cặp số được gọi là nguyên tố cùng nhau nếu ước chung lớn nhất của chúng bằng 1.           
 
@@ -908,8 +908,617 @@ Ghi ra giá trị điểm trung bình sau khi đã loại bỏ các giá trị n
 7.67
 ```
 
+## PY02022 - LIỆT KÊ SỐ NGUYÊN TỐ TRONG DÃY
+Cho dãy số nguyên dương A[] có N phần tử. Hãy viết chương trình liệt kê các số nguyên tố khác nhau và số lần xuất hiện của số đó trong dãy ban đầu.           
+Các số được liệt kê theo thứ tự xuất hiện.           
 
+**Input:**
 
+* Dòng đầu ghi số N (không quá 500).
+* Dòng sau ghi N số của dãy (không quá 6 chữ số).
+
+**Output:**
+
+Ghi ra các số nguyên tố khác nhau trong dãy theo thứ tự xuất hiện và số lần xuất hiện. Mỗi số liệt kê trên 1 dòng.
+
+**Ví dụ:**
+
+**Input**
+```
+10
+2 4 7 5 7 8 9 3 7 2
+```
+**Output**
+```
+2 2
+7 3
+5 1
+3 1
+```
+
+## PY02023 - SẮP XẾP THEO TỔNG CHỮ SỐ
+Cho dãy số A[] có N phần tử đều là các số nguyên dương, không quá 6 chữ số.           
+Hãy sắp xếp dãy số theo tổng chữ số tăng dần. Nếu tổng chữ số bằng nhau thì số nào nhỏ hơn sẽ viết trước.           
+
+**Input:**
+
+* Dòng đầu ghi số bộ test (không quá 10)
+* Mỗi bộ test gồm 2 dòng:
+* Dòng đầu là số N (N < 100)
+* Dòng thứ 2 ghi N số của mảng A[], các số đều nguyên dương và không quá 9 chữ số.
+
+**Output:**
+
+Với mỗi bộ test, ghi trên một dòng dãy số kết quả.
+
+**Ví dụ:**
+
+**Input**
+```
+1
+8
+143 43 22 99 7 9 1111 10000000
+```
+**Output**
+```
+10000000 22 1111 7 43 143 9 99
+```
+
+## PY02024 - SẮP XẾP THEO TÍCH CHỮ SỐ
+Cho dãy số A[] có N phần tử đều là các số nguyên dương, không quá 6 chữ số.           
+Hãy sắp xếp dãy số theo tích các chữ số tăng dần. Nếu tích các chữ số bằng nhau thì số nào nhỏ hơn sẽ viết trước.           
+
+**Input:**
+
+* Dòng đầu ghi số bộ test (không quá 10)
+* Mỗi bộ test gồm 2 dòng:
+* Dòng đầu là số N (N < 100)
+* Dòng thứ 2 ghi N số của mảng A[], các số đều nguyên dương và không quá 9 chữ số.
+
+**Output:**
+
+Với mỗi bộ test, ghi trên một dòng dãy số kết quả.
+
+**Ví dụ:**
+
+**Input**
+```
+1
+8
+143 43 22 99 7 9 1111 10000000
+```
+**Output**
+```
+10000000 1111 22 7 9 43 143 99
+```
+
+## PY02036 - LIỆT KÊ CẶP SỐ NGUYÊN TỐ CÙNG NHAU
+Cho dãy số A[] có n phần tử là các số nguyên dương khác nhau, giá trị không quá 100. Hãy liệt kê các cặp số nguyên tố cùng nhau xuất hiện trong dãy theo thứ tự tăng dần, mỗi cặp số in trên một dòng.           
+Một cặp số được gọi là nguyên tố cùng nhau nếu ước chung lớn nhất của chúng bằng 1.           
+
+**Input:**
+
+* Dòng đầu ghi số n (không quá 100).
+* Dòng thứ 2 ghi n số của dãy A[]
+
+**Output:**
+
+Ghi lần lượt các cặp số nguyên tố cùng nhau theo thứ tự tăng dần.
+
+**Ví dụ:**
+
+**Input**
+```
+5
+3 7 9 6 13
+```
+**Output**
+```
+3 7
+3 13
+6 7
+6 13
+7 9
+7 13
+9 13
+```
+
+## PY02039 - MA TRẬN - 1
+Cho ma trận vuông cấp N*N chỉ bao gồm các số nguyên dương.           
+Với đường chéo chính, ta sẽ chia ma trận thành 2 nửa, được gọi là nửa trên và nửa dưới của đường chéo chính (không tính các phần tử nằm trên đường chéo chính). 
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/abe349a7-3081-4c5c-9e09-f64e7858380e)
+
+Độ chênh lệch của ma trận được tính bằng trị tuyệt đối khi lấy **tổng giá trị các phần tử ở nửa trên** trừ đi **tổng giá trị các phần tử ở nửa dưới**.           
+Nhập thêm một giá trị K gọi là *ngưỡng cân đối của ma trận*.  Trong trường hợp độ chênh lệch không quá K thì ma trận được coi là cân đối, nếu lớn hơn K thì không cân đối.           
+Hãy xác định độ chênh lệch và tính cân đối của ma trận.           
+
+**Input:**
+
+* Dòng đầu ghi số N (2 < N < 50)
+* N dòng tiếp theo ghi các giá trị của ma trận, các số đều nguyên dương và không quá 1000.
+* Dòng cuối ghi số K (0 < K <100)
+
+**Output:**
+
+* Dòng đầu ghi chữ YES hoặc NO
+* Dòng thứ 2 ghi ra giá trị độ chênh lệch của ma trận
+
+**Ví dụ:**
+
+**Input**
+```
+5
+2 8 10 6 7
+6 3 2 6 9
+10 2 6 2 8
+9 9 7 9 8
+9 6 5 6 9
+5
+```
+**Output**
+```
+YES
+3
+```
+
+## PY02040 - MA TRẬN - 2
+Cho ma trận vuông cấp N*N chỉ bao gồm các số nguyên dương.         
+Với đường chéo phụ, ta sẽ chia ma trận thành 2 nửa, được gọi là nửa trên và nửa dưới của đường chéo phụ (không tính các phần tử nằm trên đường chéo phụ).           
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/abe349a7-3081-4c5c-9e09-f64e7858380e)
+
+Độ chênh lệch của ma trận được tính bằng trị tuyệt đối khi lấy **tổng giá trị các phần tử ở nửa trên** trừ đi **tổng giá trị các phần tử ở nửa dưới**.           
+Nhập thêm một giá trị K gọi là *ngưỡng cân đối của ma trận*.  Trong trường hợp độ chênh lệch không quá K thì ma trận được coi là cân đối, nếu lớn hơn K thì không cân đối.           
+Hãy xác định độ chênh lệch và tính cân đối của ma trận.           
+
+**Input:**
+
+* Dòng đầu ghi số N (2 < N < 50)
+* N dòng tiếp theo ghi các giá trị của ma trận, các số đều nguyên dương và không quá 1000.
+* Dòng cuối ghi số K (0 < K <100)
+
+**Output:**
+
+* Dòng đầu ghi chữ YES hoặc NO
+* Dòng thứ 2 ghi ra giá trị độ chênh lệch của ma trận
+
+**Ví dụ:**
+
+**Input**
+```
+5
+2 8 10 6 7
+6 3 2 6 9
+10 2 6 2 8
+9 9 7 9 8
+9 6 5 6 9
+5
+```
+**Output**
+```
+NO
+11
+```
+
+## ĐOẠN LIÊN TIẾP NHỎ HƠN
+Cho dãy số A[] có N phần tử. Với mỗi vị trí thứ i trong dãy, hãy tính độ dài của đoạn liên tiếp tính từ i trở về phía trước mà các giá trị đều nhỏ hơn hoặc bằng A[i].           
+
+**Input: Dòng đầu ghi số bộ test (không quá 10). Mỗi test có 2 dòng.:**
+
+* Dòng đầu tiên gồm 1 số nguyên N (1 ≤ N ≤ 10<sup>5</sup>).
+* Dòng tiếp theo gồm N số nguyên A<sub>1</sub>, A<sub>2</sub>, …, A<sub>N</sub> (1 ≤ A[i] ≤ 10<sup>6</sup>).
+
+**Output:**
+
+Với mỗi bộ test, in ra dãy kết quả trên một dòng.
+
+**Ví dụ:**
+
+**Input**
+```
+1
+7
+100 80 60 70 60 75 85
+```
+**Output**
+```
+1 1 1 2 1 4 6
+```
+
+## PY02053 - TÍNH CÂN ĐỐI CỦA MA TRẬN - 2
+Cho ma trận vuông cấp N*N chỉ bao gồm các số nguyên dương.         
+Với đường chéo phụ, ta sẽ chia ma trận thành 2 nửa, được gọi là nửa trên và nửa dưới của đường chéo phụ (không tính các phần tử nằm trên đường chéo phụ).           
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/abe349a7-3081-4c5c-9e09-f64e7858380e)
+
+Độ chênh lệch của ma trận được tính bằng trị tuyệt đối khi lấy **tổng giá trị các phần tử ở nửa trên** trừ đi **tổng giá trị các phần tử ở nửa dưới**.           
+Nhập thêm một giá trị K gọi là *ngưỡng cân đối của ma trận*.  Trong trường hợp độ chênh lệch không quá K thì ma trận được coi là cân đối, nếu lớn hơn K thì không cân đối.           
+Hãy xác định độ chênh lệch và tính cân đối của ma trận.           
+
+**Input:**
+
+* Dòng đầu ghi số N (2 < N < 50)
+* N dòng tiếp theo ghi các giá trị của ma trận, các số đều nguyên dương và không quá 1000.
+* Dòng cuối ghi số K (0 < K <100)
+
+**Output:**
+
+* Dòng đầu ghi chữ YES hoặc NO
+* Dòng thứ 2 ghi ra giá trị độ chênh lệch của ma trận
+
+**Ví dụ:**
+
+**Input**
+```
+5
+2 8 10 6 7
+6 3 2 6 9
+10 2 6 2 8
+9 9 7 9 8
+9 6 5 6 9
+5
+```
+**Output**
+```
+NO
+11
+```
+
+## PY02060 - BÀI D. BỘI SỐ CHUNG NHỎ NHẤT
+Bội số chung nhỏ nhất của hai số nguyên x và y (viết tắt LCM(x, y)) là số nguyên dương nhỏ nhất chia hết cho cả x và y.  Cho hai số nguyên dương a và b (a ≤ b). Hãy đếm xem có bao nhiêu cặp số nguyên (x, y) sao cho
+
+**LCM(x,y) = a * (a+1) * …. * b**         
+
+**Input:**
+
+Dòng đầu ghi số bộ test (không quá 10).  Mỗi test ghi trên một dòng hai số a và b (a ≤ b ≤ 10<sup>6</sup>)
+
+**Output:**
+
+Với mỗi bộ test, ghi ra số lượng cặp (x, y)  thỏa mãn điều kiện đề bài. Vì kết quả có thể rất lớn nên hãy ghi kết quả theo modulo 10<sup>9</sup> + 7.
+
+**Ví dụ:**
+
+**Input**
+```
+2
+2 3
+5 5
+```
+**Output**
+```
+9
+3
+```
+
+## PY02061 - TÍNH TÍCH CHẬP MA TRẬN
+Phép tích chập (convolution) là kỹ thuật quan trọng trong xử lý ảnh. Kết quả phép tích chập giữa ma trận x[] và ma trận kernel h[] được xác định bằng công thức: 
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/1dfb13ab-d91a-4b08-b4f2-d9505c221121)
+
+Trong đó ma trận kernel có kích thước bằng 2k+1. Với kernel 3x3 thì -1 ≤ u,v ≤ 1, do đó, giá trị các phần tử của ma trận kết quả có dạng:    
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/5ea8c153-64e6-4870-9043-0c9d41ab04c6)
+
+Cho ma trận ảnh và ma trận kernel 3x3. Nhiệm vụ của bạn là hãy thực hiện phép nhân tích chập của 2 ma trận, sau đó tính **tổng tất cả các phần tử của ma trận thu được**.       
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/467fce15-cac5-4c88-8768-3ecdc82d3766)
+
+Giải thích test: Vị trí ô đầu tiên của ma trận kết quả:     
+
+![image](https://github.com/VietHungHoang/Python_CodePTIT/assets/93313248/36cb98b4-690b-456b-bbf6-89a76a7bdd39)
+
+**Input:**
+
+* Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+* Mỗi test bắt đầu bởi hai số nguyên N và M (3 ≤ N,M ≤ 300).
+* Kế tiếp là N dòng, mỗi dòng gồm M số nguyên mô tả ma trận ảnh.
+* 3 dòng tiếp theo, mỗi dòng gồm 3 số nguyên mô tả ma trận kernel.
+* Giá trị các phần tử của hai ma trận có giá trị tuyệt đối không vượt quá 100.
+
+**Output:**
+
+Với mỗi test, hãy in ra tổng các phần tử của ma trận mới tìm được.
+
+**Ví dụ:**
+
+**Input**
+```
+2
+4 4
+2 1 0 0
+3 2 1 1
+4 3 2 1
+2 2 1 0
+-1 -1 -1
+-1 8 -1
+-1 -1 -1
+3 3
+1 2 3
+4 5 6
+7 8 9
+1 1 1
+1 1 1
+1 1 1
+```
+**Output**
+```
+10
+45
+```
+
+## PYKT039 - DÃY SỐ PHÙ HỢP
+Cho hai dãy số A[] và B[] có cùng N phần tử. Dãy số A[] được gọi là phù hợp với dãy số B[] khi và chỉ khi tồn tại một phép sắp đặt lại các phần tử trong A[] và B[] sao cho phần tử thứ i của A[] nhỏ hơn hoặc bằng phần tử thứ i của mảng B[] (với tất cả vị trí trong dãy).           
+Hãy xác định hai dãy số A[] và B[] có phù hợp với nhau hay không?           
+
+**Input:**
+
+* Dòng đầu tiên đưa vào số lượng bộ test T (T≤100).
+* Những dòng tiếp theo đưa vào các bộ test. Mỗi bộ test gồm 3 phần: phần thứ nhất là số N; phần thứ hai là N số của A[]; phần thứ 3 là N số của B[].
+* (1≤N≤100, 0≤A[i], B[i]≤1000)
+
+**Output:**
+
+Đưa ra kết quả mỗi test theo từng dòng. Kết quả “YES” nếu A[] phù hợp với B[], ngược lại đưa ra “NO”.
+
+**Ví dụ:**
+
+**Input**
+```
+2
+4
+7 5 3 2
+5 4 8 7
+8
+7 5 3 2 5 105 45 10
+2 4 0 5 6 9 75 84
+```
+**Output**
+```
+YES
+NO
+```
+
+## PYKT041 - ĐẾM CẶP ĐỒNG XU
+Cho một lưới hình vuông kích thước N*N. Trên một số ô của lưới người ta đặt các đồng xu (ký hiệu bằng chữ cái C (coin)). Hãy đếm xem có thể lấy ra bao nhiêu cặp đồng xu ở cùng một hàng hoặc cùng một cột.           
+
+**Input:**
+
+* Dòng đầu tiên ghi số N (1 ≤ N ≤ 100)
+* N dòng tiếp theo mô tả trạng thái của lưới, chữ cái C ứng với vị trí có đồng x, dấu chấm tương ứng với ô trống)
+
+**Output:**
+
+Ghi ra số cặp đồng xu đếm được.
+
+**Ví dụ:**
+
+**Input**
+```
+4
+CC..
+C..C
+.CC.
+.CC.
+```
+**Output**
+```
+9
+```
+
+## PYKT066 - DÃY CON NGẮN NHẤT
+Cho dãy số A[] có N phần tử. Nhiệm vụ của bạn là tìm dãy con liên tiếp có độ dài nhỏ nhất, sao cho Ước số chung lớn nhất của tất cả các phần tử trong dãy đúng bằng K.           
+
+**Input:**
+
+* Dòng đầu tiên là số lượng bộ test T (T <= 10).
+* Mỗi test bắt đầu bằng 2 số nguyên N và K.
+* Dòng tiếp theo gồm N số nguyên A[i] .
+* Giới hạn: 1 <= N <= 1000; 1 <= A[i], K <= 10<sup>9</sup>
+
+**Output:**
+
+Với mỗi test, hãy in ra đáp án trên một dòng. Nếu không tìm được dãy con nào, in ra -1.
+
+**Ví dụ:**
+
+**Input**
+```
+3
+8 3
+6 9 7 10 12 24 36 27
+4 3
+2 4 6 8
+4 6
+1 2 3 6
+```
+**Output**
+```
+2
+-1
+1
+```
+
+## PYKT071 - SỐ KHÔNG GIẢM TRONG FILE NHỊ PHÂN
+Cho hai file nhị phân DATA1.in và DATA2.in, mỗi file đều chứa một ArrayList<Integer>. Dữ liệu đảm bảo có không quá 100000 số trong mỗi file, và các số đều nguyên dương, không quá 4 chữ số.           
+Một số nguyên dương có từ 2 chữ số trở lên được gọi là không giảm nếu các chữ số từ trái sang phải của nó thỏa mãn không có chữ số đằng sau nào lại nhỏ hơn chữ số phía trước nó. Ví dụ: 899, 1134; 7778.           
+Hãy liệt kê các số không giảm xuất hiện trong cả hai file DATA1.in và DATA2.in, các số cần liệt kê theo thứ tự tăng dần và kèm theo số lần xuất hiện trong lần lượt từng file.           
+
+**Input:**
+
+Hai file nhị phân DATA1.in và DATA2.in
+
+**Output:**
+
+Ghi lần lượt từng số thỏa mãn theo thứ tự tăng dần, tiếp theo là số lần xuất hiện trong file 1 rồi đến file 2.
+
+**Ví dụ:**
+
+**Input**
+```
+Hai file nhị phân
+```
+**Output**
+```
+Lần lượt các số thỏa mãn và số lần tương ứng. Ví dụ:
+59 1 19
+66 6 12
+1228 9 10
+```
+
+## PYKT072 - XOAY VÒNG XÂU KÝ TỰ
+Cho N xâu S[1], S[2], …, S[N] có độ dài bằng nhau. Mỗi bước, với xâu T, bạn được phép xoay vòng 1 kí tự, tức lấy kí tự đầu tiên của T rồi chuyển xuống cuối. Ví dụ xâu “cool” sẽ chuyển thành “oolc”.           
+Bạn cần phải xoay N xâu sao cho tất cả chúng đều giống nhau. Hãy xác định số bước ít nhất để hoàn thành được công việc này?           
+
+**Input:**
+
+* Mỗi test bắt đầu bởi số nguyên N (1 ≤ N ≤ 50).
+* N dòng tiếp theo, mỗi dòng gồm xâu S[i] có độ dài không quá 50.
+
+**Output:**
+
+Với mỗi test, in ra số bước ít nhất tìm được, nếu không thể biến đổi, hãy in ra “NO”.
+
+**Ví dụ 1:**
+
+**Input**
+```
+4
+xzzwo
+zwoxz
+zzwox
+xzzwo
+```
+**Output**
+```
+5
+```
+
+**Ví dụ 2:**
+
+**Input**
+```
+2
+molzv
+lzvmo
+```
+**Output**
+```
+2
+```
+**Ví dụ 3:**
+
+**Input**
+```
+3
+kc
+kc
+kc
+```
+**Output**
+```
+0
+```
+**Ví dụ 1:**
+
+**Input**
+```
+4
+xzzwo
+zwoxz
+zzwox
+xzzwo
+```
+**Output**
+```
+5
+```
+**Ví dụ 4:**
+
+**Input**
+```
+3
+aa
+aa
+ab
+```
+**Output**
+```
+-1
+```
+
+*Giải thích test 1:* Xoay tất cả các xâu thành “zwoxz”.
+
+## PYKT073 - XÁC ĐỊNH THỂ LOẠI THƠ
+Trong thơ ca có rất nhiều các thể thơ và những cách gieo vần khác nhau cho các bài thơ. Trong số những thể thơ đó, bạn có thể lựa chọn cho mình một loại thể thơ riêng để đem lại nhiều hiệu quả cho bài thơ và giúp cho bạn có thể thấy được sự hiệu quả trong cách truyền đạt những cung bậc cảm xúc vào trong bài thơ.           
+Cho danh sách các bài thơ gồm hai thể loại thơ lục bát và thơ thất ngôn tứ tuyệt.           
+1. Thơ lục bát           
+- Là thể thơ dân tộc.           
+- Số chữ và số câu: Một cặp hai câu thơ, câu trên sáu chữ (lục), câu dưới tám chữ (bát). Một bài thơ có thể có nhiều cặp lục bát, số lượng cặp câu không hạn định.           
+2. Thơ thất ngôn tứ tuyệt           
+- Xuất xứ: Trung Quốc           
+- Thơ trung đại, thơ cận đại           
+- Là bài thơ mà mỗi dòng 7 tiếng, bài có 4 câu (Khai - Thừa - Chuyển - Hợp)           
+Nhiệm vụ của bạn là hãy viết chương trình xác định số lượng bài thơ và thể thơ (ghi bằng số) của từng bài từ danh sách các bài thơ có sẵn.           
+
+**Input:**
+
+* Dòng đầu tiên cho số N là tổng số dòng của tất cả các bài thơ.
+* N dòng tiếp theo ghi lại các câu thơ của từng bài. Các bài thơ lục bát sẽ đảm bảo không đặt liên tiếp nhau.
+
+**Output:**
+
+In ra kết quả số bài thơ và số tương ứng với thể thơ theo từng dòng.
+
+**Ví dụ:**
+
+**Input**
+```
+8
+Minh ve minh co nho ta
+Muoi lam nam ay thiet tha man nong
+Minh ve minh co nho khong
+Nhin cay nho nui nhin song nho nguon
+Mot canh hai canh lai ba canh
+Tran troc ban khoan giac chang lanh
+Canh bon canh nam vua chop mat
+Sao vang nam canh mong hon bay
+```
+**Output**
+```
+2
+1
+2
+```
+
+## PYKT074 - GỬI THÔNG BÁO
+Một thông báo (notification) là một tin nhắn, thông điệp được hiển thị trong một thời gian ngắn trên thanh trạng thái của thiết bị nhằm gây sự chú ý của người dùng. Nó tương tự như một tin nhắn thông thường (SMS ), tuy nhiên nó khác SMS là dịch vụ này hiện nay là hoàn toàn miễn phí và cần có kết nối internet mới có thể gửi và nhận notification. và notification chỉ có thể gửi cho ứng dụng mà nhà phát triển đã đăng ký và người dùng có cài ứng dụng đó. Các notification này sẽ hiển thị trên thanh trạng thái của smartphone và tablet, thường thanh trạng thái ở phía trên cùng của màn hình. Thông thường một thông báo là được tự động kích hoạt nhằm thông báo tới người dùng là ứng dụng đó đã hoàn thành một công việc nào đó. Hoặc bạn có thể gửi thông tin khuyến mãi tới cho khách hàng của bạn, mời khách hàng tham gia một sự kiện nào đó...           
+Theo quy định của một số thiết bị. Nội dung thông báo chỉ được phép chứa tối đa 100 ký tự. Điều này đòi hỏi lập trình viên phải xử lý nội dung các thông báo có độ dài lớn hơn 100 ký tự bằng cách rút gọn thông tin. Tuy nhiên, việc rút gọn phải đảm bảo nguyên tắc không bị cắt giữa từ. Trong trường hợp nếu từ hiện tại làm độ dài thông báo vượt quá 100 ký tự sẽ loại bỏ từ đó khỏi thông báo.           
+Nhiệm vụ của bạn là hãy viết chương trình xử lý yêu cầu trên.           
+
+**Input:**
+
+* Dòng đầu tiên là số bộ test T < 100.
+* T dòng tiếp theo mỗi dòng là một xâu ký tự có độ dài tối đa 1000 ký tự.
+
+**Output:**
+
+In ra kết quả các thông báo đã xử lý.
+
+**Ví dụ:**
+
+**Input**
+```
+2
+Can cu Ke hoach giang day – hoc tap hoc ky 1 nam hoc 2021 – 2022 Can cu ket qua thi hoc ky 2 va hoc ky phu ky he nam hoc 2020 – 2021
+Hoc vien Cong nghe Buu chinh Vien thong to chuc khai giang truc tuyen
+```
+**Output**
+```
+Can cu Ke hoach giang day – hoc tap hoc ky 1 nam hoc 2021 – 2022 Can cu ket qua thi hoc ky 2 va
+Hoc vien Cong nghe Buu chinh Vien thong to chuc khai giang truc tuyen
+```
 
 
 
