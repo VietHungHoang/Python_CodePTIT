@@ -1,45 +1,26 @@
-class Bill:
+t = {'A' : 100, 'B' : 500, 'C' : 200}
+class Customer:
     def __init__(self, id, name, type, start, end):
-        self.id = id
-        self.name = name
-        self.type = type
-        self.start = start
-        self.end = end
+        self.id = 'KH{:02d}'.format(id)
+        self.name = " ".join(name.strip().split()).title()
+        self.calMoney(type, int(start), int(end))
 
-        self.setLimit()
-        self.calculate()
-
-    def setLimit(self):
-        if type == 'A':
-            self.limit = 100
-        elif type == 'B':
-            self.limit = 500
-        elif type == 'C':
-            self.limit = 200
-
-    def calculate(self):
-        if self.end - self.start < self.limit:
-            self.inLimit = (self.end - self.start) * 450
-            self.overLimit = 0
-            self.vat = 0
+    def calMoney(self, type, start, end):
+        num = end - start
+        out = num - t[type]
+        if out >= 0:
+            self.moneyIn = t[type] * 450
+            self.moneyOut = out * 1000
         else:
-            self.inLimit = self.limit * 450
-            self.overLimit = (self.end - self.start - self.limit) * 1000
-            self.vat = self.overLimit // 20
-        self.total = self.inLimit + self.overLimit + self.vat
-
+            self.moneyIn = num * 450
+            self.moneyOut = 0
+        self.vat = self.moneyOut // 20
+        self.totalMoney = self.moneyIn + self.moneyOut + self.vat
     def __str__(self):
-        return '{} {} {} {} {} {}'.format(self.id, self.name, self.inLimit, self.overLimit, self.vat, self.total)
-
-
-list = []
-for i in range(int(input())):
-    id = 'KH0{}'.format(i + 1)
-    name = ' '.join(input().split()).title()
-    arr = input().split()
-    type = str(arr[0])
-    start, end = int(arr[1]), int(arr[2])
-    list.append(Bill(id, name, type, start, end))
-
-list.sort(key=lambda e: -e.total)
-print(*list, sep='\n')
+        return f'{self.id} {self.name} {self.moneyIn} {self.moneyOut} {self.vat} {self.totalMoney}'
+if __name__ == '__main__':
+    l = []
+    for i in range(int(input())):
+        l.append(Customer(i + 1, input(), *input().split()))
+    l.sort(key = lambda x : -x.totalMoney)
+    print(*l, sep = '\n')

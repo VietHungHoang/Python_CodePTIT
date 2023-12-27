@@ -1,35 +1,23 @@
+from math import *
+# Điểm số khi in cần làm tròn lên. Có thể sử dụng 2 cách ở dưới
 class Student:
-    def __init__(self, id, name, score1, score2, score3):
-        self.id = self.setId(id)
-        self.name = self.setName(name)
-        self.score = self.setScore(float(score1), float(score2), float(score3))
-        self.rank = None
-
-    def setId(self, id):
-        return 'SV{0:0>2}'.format(id)
-
-    def setName(self, name):
-        name = name.lower().split()
-        for i in range(len(name)):
-            name[i] = name[i][0].upper() + name[i][1:]
-        return ' '.join(name)
-
-    def setScore(self, score1, score2, score3):
-        return '{:.2f}'.format((score1*3 + score2*3 + score3*2)/8+0.001)
-
+    def __init__(self,id, name, m1, m2, m3):
+        self.id = 'SV{0:0>2}'.format(id)
+        self.name = " ".join(name.strip().split()).title()
+        self.avg = (m1 * 3 + m2 * 3 + m3 * 2) / 8
+        self.rank = 0
     def __str__(self):
-        return '{} {} {} {}'.format(self.id, self.name, self.score, self.rank)
-
-
-n = int(input())
-students = [Student(i+1, input(), input(), input(), input()) for i in range(n)]
-students.sort(key=lambda ele: (-float(ele.score), ele.id))
-
-students[0].rank = 1
-for i in range(1, n):
-    if students[i].score == students[i-1].score:
-        students[i].rank = students[i-1].rank
-    else:
-        students[i].rank = i+1
-
-print(*students, sep='\n')
+        return f'{self.id} {self.name} {"%.2f" % (ceil(self.avg * 100) / 100)} {self.rank}'
+        # return f'{self.id} {self.name} {"%.2f" % (self.avg + 0.001)} {self.rank}'
+if __name__ == '__main__':
+    n = int(input())
+    l = []
+    for i in range(n):
+        l.append(Student(i + 1, input(), int(input()), int(input()), int(input())))
+    l.sort(key = lambda x : (-x.avg, x.id))
+    l[0].rank = 1
+    for i in range(1, n):
+        if l[i].avg == l[i - 1].avg:
+            l[i].rank = l[i - 1].rank
+        else: l[i].rank = i + 1
+    print(*l, sep = "\n")
